@@ -110,7 +110,6 @@
       margin: 20px auto;
     }
 
-    /* Two-column layout for screens wider than 1000px */
     @media (min-width: 1000px) {
       .info-container {
         flex-direction: row;
@@ -139,25 +138,56 @@
 
   <div class="container" id="menu">
     <h2>Menu</h2>
-    <div class="menu-item">
-      <p class="menu-item-name">Appetizers</p>
-      <p class="menu-item-description"><strong>Briam</strong> – A medley of thinly sliced vegetables, delicately seasoned with oregano, rosemary, parsley, and fresh garlic, then drizzled with extra virgin olive oil.</p>
-      <p class="menu-item-description"><strong>Soutzoukakia</strong> – Savory ground beef blended with onion, garlic, fresh herbs, and aromatic cumin, slowly simmered in a rich tomato sauce.</p>
-      <p class="menu-item-description"><strong>Bouyiourdi</strong> – Oven-baked feta cheese with ripe tomatoes, garlic, and chili, finished with extra virgin olive oil and served with warm pita bread.</p>
+
+    <!-- Appetizers -->
+    <div class="menu-item" style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1; min-width: 250px;">
+          <p class="menu-item-name">Appetizers</p>
+          <p class="menu-item-description"><strong>Briam</strong> – A medley of thinly sliced vegetables, delicately seasoned with oregano, rosemary, parsley, and fresh garlic, then drizzled with extra virgin olive oil.</p>
+          <p class="menu-item-description"><strong>Soutzoukakia</strong> – Savory ground beef blended with onion, garlic, fresh herbs, and aromatic cumin, slowly simmered in a rich tomato sauce.</p>
+          <p class="menu-item-description"><strong>Bouyiourdi</strong> – Oven-baked feta cheese with ripe tomatoes, garlic, and chili, finished with extra virgin olive oil and served with warm pita bread.</p>
+          <!-- House Specialty -->
+          <p class="menu-item-description"><strong>House Specialty: Saganaki</strong> – A traditional Greek fried cheese dish, flambéed with ouzo at the table for a dramatic and delicious experience.</p>
+        </div>
+        <div style="flex: 1; min-width: 250px; text-align: center;">
+          <img src="briam.jpg" alt="Briam dish" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);" />
+        </div>
+      </div>
     </div>
 
-    <div class="menu-item">
-      <p class="menu-item-name">Entrées</p>
-      <p class="menu-item-description"><strong>Branzino</strong> – Whole Greek sea bass, expertly prepared and infused with fresh lemon wedges, oregano, and rosemary, drizzled with olive oil for a delicate, flavorful finish.</p>
-      <p class="menu-item-description"><strong>Moussaka</strong> – A traditional Greek dish featuring layers of roasted eggplant and a rich, spiced lamb sauce, topped with a velvety béchamel.</p>
-      <p class="menu-item-description"><strong>Lahanorizio</strong> – A comforting braise of sautéed cabbage, fresh vegetables, and creamy rice, brought to perfection with a splash of lemon juice, a hint of parsley, and crumbles of feta cheese.</p>
+    <!-- Entrées -->
+    <div class="menu-item" style="display: flex; flex-direction: column; gap: 20px; margin-top: 40px;">
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1; min-width: 250px;">
+          <p class="menu-item-name">Entrées</p>
+          <p class="menu-item-description"><strong>Branzino</strong> – Whole Greek sea bass, expertly prepared and infused with fresh lemon wedges, oregano, and rosemary, drizzled with olive oil for a delicate, flavorful finish.</p>
+          <p class="menu-item-description"><strong>Moussaka</strong> – A traditional Greek dish featuring layers of roasted eggplant and a rich, spiced lamb sauce, topped with a velvety béchamel.</p>
+          <p class="menu-item-description"><strong>Lahanorizio</strong> – A comforting braise of sautéed cabbage, fresh vegetables, and creamy rice, brought to perfection with a splash of lemon juice, a hint of parsley, and crumbles of feta cheese.</p>
+          <!-- House Specialty -->
+          <p class="menu-item-description"><strong>House Specialty: Lamb Kleftiko</strong> – Slow-cooked lamb, marinated with garlic, lemon, and rosemary, served in a rustic clay pot for maximum flavor.</p>
+        </div>
+        <div style="flex: 1; min-width: 250px; text-align: center;">
+          <img src="branzino.jpg" alt="Branzino dish" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);" />
+        </div>
+      </div>
     </div>
 
-    <div class="menu-item">
-      <p class="menu-item-name">Desserts</p>
-      <p class="menu-item-description"><strong>Baklava Ice Cream Sundae</strong> – Layers of crispy, golden phyllo pastry combined with rich vanilla ice cream, topped with cinnamon-dusted pistachios and walnuts, then finished with a warm drizzle of honey.</p>
-      <p class="menu-item-description"><strong>Loukoumades</strong> – Traditional Greek honey puffs, lightly fried to golden perfection, dusted with crushed nuts, and served with a side of fragrant honey.</p>
-      <p class="menu-item-description"><strong>Portokalopita</strong> – A luscious, butter-free orange custard cake crafted with phyllo dough and bathed in a fragrant honey-orange syrup.</p>
+    <!-- Desserts -->
+    <div class="menu-item" style="display: flex; flex-direction: column; gap: 20px; margin-top: 40px;">
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1; min-width: 250px;">
+          <p class="menu-item-name">Desserts</p>
+          <p class="menu-item-description"><strong>Baklava Ice Cream Sundae</strong> – Layers of crispy, golden phyllo pastry combined with rich vanilla ice cream, topped with cinnamon-dusted pistachios and walnuts, then finished with a warm drizzle of honey.</p>
+          <p class="menu-item-description"><strong>Loukoumades</strong> – Traditional Greek honey puffs, lightly fried to golden perfection, dusted with crushed nuts, and served with a side of fragrant honey.</p>
+          <p class="menu-item-description"><strong>Portokalopita</strong> – A luscious, butter-free orange custard cake crafted with phyllo dough and bathed in a fragrant honey-orange syrup.</p>
+          <!-- House Specialty -->
+          <p class="menu-item-description"><strong>House Specialty: Galaktoboureko</strong> – A rich, custard-filled dessert wrapped in golden, flaky phyllo dough and soaked in a sweet syrup.</p>
+        </div>
+        <div style="flex: 1; min-width: 250px; text-align: center;">
+          <img src="baklava.jpg" alt="Baklava Ice Cream Sundae" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);" />
+        </div>
+      </div>
     </div>
   </div>
 
