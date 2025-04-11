@@ -122,47 +122,42 @@
       }
     }
 
+    /* Menu section layout */
     .menu-item {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: flex-start;
-      margin-bottom: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 50px;
+      width: 95%;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .menu-image {
+    .menu-text, .menu-image {
       flex: 1;
-      min-width: 250px;
-      order: 1;
-    }
-
-    .menu-text {
-      flex: 1;
-      min-width: 250px;
-      order: 2;
-    }
-
-    @media (min-width: 769px) {
-      .menu-image {
-        order: 2;
-      }
-      .menu-text {
-        order: 1;
-      }
-    }
-
-    .image-box {
+      padding: 20px;
       background: rgba(255, 255, 255, 0.1);
-      padding: 10px;
       border-radius: 10px;
-      text-align: center;
     }
 
-    .image-box img {
-      max-width: 100%;
+    .menu-image img {
+      width: 100%;
       height: auto;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 768px) {
+      .menu-item {
+        flex-direction: column;
+      }
+
+      .menu-image {
+        order: -1;
+      }
     }
   </style>
 </head>
@@ -184,11 +179,6 @@
 
     <!-- Appetizers -->
     <div class="menu-item">
-      <div class="menu-image">
-        <div class="image-box">
-          <img src="briam.jpg" alt="Briam dish" />
-        </div>
-      </div>
       <div class="menu-text">
         <p class="menu-item-name">Appetizers</p>
         <p class="menu-item-description"><strong>Briam</strong> – A medley of thinly sliced vegetables, delicately seasoned with oregano, rosemary, parsley, and fresh garlic, then drizzled with extra virgin olive oil.</p>
@@ -196,37 +186,36 @@
         <p class="menu-item-description"><strong>Bouyiourdi</strong> – Oven-baked feta cheese with ripe tomatoes, garlic, and chili, finished with extra virgin olive oil and served with warm pita bread.</p>
         <p class="menu-item-description"><strong>House Specialty:</strong> <em>Chimera Platter</em> – A divine trio of dolmas, grilled octopus, and roasted red pepper hummus served with warm lavash.</p>
       </div>
+      <div class="menu-image">
+        <img src="briam.jpg" alt="Briam dish" />
+      </div>
     </div>
 
-    <!-- Entrées -->
+    <!-- Entrees -->
     <div class="menu-item">
-      <div class="menu-image">
-        <div class="image-box">
-          <img src="branzino.jpg" alt="Branzino dish" />
-        </div>
-      </div>
       <div class="menu-text">
         <p class="menu-item-name">Entrées</p>
         <p class="menu-item-description"><strong>Branzino</strong> – Whole Greek sea bass, expertly prepared and infused with fresh lemon wedges, oregano, and rosemary, drizzled with olive oil for a delicate, flavorful finish.</p>
         <p class="menu-item-description"><strong>Moussaka</strong> – A traditional Greek dish featuring layers of roasted eggplant and a rich, spiced lamb sauce, topped with a velvety béchamel.</p>
         <p class="menu-item-description"><strong>Lahanorizio</strong> – A comforting braise of sautéed cabbage, fresh vegetables, and creamy rice, brought to perfection with a splash of lemon juice, a hint of parsley, and crumbles of feta cheese.</p>
-        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Poseidon's Feast</em> – A grilled seafood medley of shrimp, calamari, and scallops, kissed by citrus and herbs.</p>
+        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Poseidon's Feast</em> – Grilled swordfish, calamari, and jumbo shrimp plated with charred lemon and wild herb aioli.</p>
+      </div>
+      <div class="menu-image">
+        <img src="branzino.jpg" alt="Branzino dish" />
       </div>
     </div>
 
     <!-- Desserts -->
     <div class="menu-item">
-      <div class="menu-image">
-        <div class="image-box">
-          <img src="baklava.jpg" alt="Baklava Ice Cream Sundae" />
-        </div>
-      </div>
       <div class="menu-text">
         <p class="menu-item-name">Desserts</p>
         <p class="menu-item-description"><strong>Baklava Ice Cream Sundae</strong> – Layers of crispy, golden phyllo pastry combined with rich vanilla ice cream, topped with cinnamon-dusted pistachios and walnuts, then finished with a warm drizzle of honey.</p>
         <p class="menu-item-description"><strong>Loukoumades</strong> – Traditional Greek honey puffs, lightly fried to golden perfection, dusted with crushed nuts, and served with a side of fragrant honey.</p>
         <p class="menu-item-description"><strong>Portokalopita</strong> – A luscious, butter-free orange custard cake crafted with phyllo dough and bathed in a fragrant honey-orange syrup.</p>
-        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Nectar of the Gods</em> – Rosewater panna cotta topped with candied figs and a drizzle of saffron honey.</p>
+        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Nectar of the Gods</em> – Delicate yogurt mousse with saffron, honeycomb crumble, and edible gold leaf.</p>
+      </div>
+      <div class="menu-image">
+        <img src="baklava.jpg" alt="Baklava Ice Cream Sundae" />
       </div>
     </div>
   </div>
@@ -257,7 +246,6 @@
     </div>
   </div>
 
-  <p>© 2025, Meyli Roque Martinez. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  <p style="text-align:center; font-size: 12px; opacity: 0.7;">© 2025, Meyli Roque Martinez. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
 </body>
 </html>
-
