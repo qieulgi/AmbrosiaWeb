@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ambrosia</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Meie+Script&family=Praise&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -19,7 +19,6 @@
       color: white;
       position: relative;
       overflow-x: hidden;
-      overflow-y: auto;
     }
 
     body::before {
@@ -39,13 +38,11 @@
       background: rgba(0, 0, 0, 0.75);
       color: white;
       width: 95%;
-      max-width: 800px;
+      max-width: 900px;
       padding: 20px;
       border-radius: 8px;
       margin: 20px auto;
       text-align: center;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
     }
 
     .navbar {
@@ -69,19 +66,49 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
 
-    .menu-item-name,
-    h1,
-    h2 {
+    h1, h2, .menu-item-name {
       font-family: 'Fleur De Leah', cursive;
       font-size: 24px;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     }
 
     .menu-item-description {
-      font-family: 'Tinos', serif;
       font-size: 16px;
-      line-height: 1.5;
       text-align: left;
+      line-height: 1.5;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      gap: 20px;
+    }
+
+    .menu-text {
+      flex: 2;
+      min-width: 250px;
+      text-align: left;
+    }
+
+    .menu-image {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .image-box {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .book-button {
@@ -119,47 +146,10 @@
         margin: 0;
       }
     }
-
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 40px;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .menu-text {
-      flex: 2;
-      min-width: 250px;
-    }
-
-    .menu-image {
-      flex: 1;
-      min-width: 200px;
-      display: flex;
-      align-items: stretch;
-    }
-
-    .image-box {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      width: 100%;
-      display: flex;
-      align-items: stretch;
-    }
-
-    .image-box img {
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    }
-
   </style>
 </head>
 <body>
+
   <div class="navbar">
     <a href="#menu">Menu</a>
     <a href="#reservations">Reservations</a>
@@ -178,9 +168,7 @@
     <!-- Appetizers -->
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="briam.png" alt="Briam dish" />
-        </div>
+        <div class="image-box"><img src="briam.jpg" alt="Briam dish" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Briam</p>
@@ -190,9 +178,7 @@
 
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="soutzoukakia.png" alt="Soutzoukakia dish" />
-        </div>
+        <div class="image-box"><img src="soutzoukakia.jpg" alt="Soutzoukakia dish" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Soutzoukakia</p>
@@ -202,9 +188,7 @@
 
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="bouyiourdi.png" alt="Bouyiourdi dish" />
-        </div>
+        <div class="image-box"><img src="bouyiourdi.jpg" alt="Bouyiourdi dish" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Bouyiourdi</p>
@@ -215,9 +199,7 @@
     <!-- Entrées -->
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="branzino.png" alt="Branzino dish" />
-        </div>
+        <div class="image-box"><img src="branzino.jpg" alt="Branzino dish" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Branzino</p>
@@ -227,9 +209,7 @@
 
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="moussaka.png" alt="Moussaka dish" />
-        </div>
+        <div class="image-box"><img src="moussaka.jpg" alt="Moussaka dish" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Moussaka</p>
@@ -239,9 +219,7 @@
 
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="lahanorizio.png" alt="Lahanorizio dish" />
-        </div>
+        <div class="image-box"><img src="lahanorizio.jpg" alt="Lahanorizio dish" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Lahanorizio</p>
@@ -252,9 +230,7 @@
     <!-- Desserts -->
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="baklava.png" alt="Baklava Ice Cream Sundae" />
-        </div>
+        <div class="image-box"><img src="baklava.jpg" alt="Baklava Sundae" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Baklava Ice Cream Sundae</p>
@@ -264,9 +240,7 @@
 
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="loukoumades.png" alt="Loukoumades" />
-        </div>
+        <div class="image-box"><img src="loukoumades.jpg" alt="Loukoumades" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Loukoumades</p>
@@ -276,9 +250,7 @@
 
     <div class="menu-item">
       <div class="menu-image">
-        <div class="image-box">
-          <img src="portokalopita.png" alt="Portokalopita" />
-        </div>
+        <div class="image-box"><img src="portokalopita.jpg" alt="Portokalopita" /></div>
       </div>
       <div class="menu-text">
         <p class="menu-item-name">Portokalopita</p>
@@ -313,6 +285,9 @@
     </div>
   </div>
 
-  <p>© 2025, Meyli Roque Martinez. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  <p style="text-align:center; padding-bottom: 30px;">
+    © 2025, Meyli Roque Martinez. This is a fictitious web page created solely for the purpose of education and training.
+  </p>
+
 </body>
 </html>
