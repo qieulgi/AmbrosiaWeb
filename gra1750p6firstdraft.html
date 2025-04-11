@@ -82,6 +82,8 @@
       font-size: 16px;
       line-height: 1.5;
       text-align: left;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .book-button {
@@ -122,54 +124,41 @@
 
     .menu-item {
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
       justify-content: space-between;
+      align-items: stretch;
       margin-bottom: 40px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     .menu-text {
       flex: 2;
       min-width: 250px;
-      padding-right: 20px;
     }
 
     .menu-image {
       flex: 1;
       min-width: 150px;
-      max-width: 180px;
-      order: 2;
+      display: flex;
+      align-items: stretch;
     }
 
     .image-box {
       background: rgba(255, 255, 255, 0.1);
-      padding: 10px;
       border-radius: 10px;
-      text-align: center;
+      width: 100%;
+      display: flex;
+      align-items: stretch;
     }
 
     .image-box img {
       width: 100%;
-      height: auto;
+      object-fit: cover;
+      height: 100%; /* match container height */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     }
 
-    @media (max-width: 768px) {
-      .menu-item {
-        flex-direction: column;
-      }
-
-      .menu-image {
-        max-width: 100%;
-        padding-top: 15px;
-      }
-
-      .menu-text {
-        padding-right: 0;
-      }
-    }
   </style>
 </head>
 <body>
@@ -190,6 +179,11 @@
 
     <!-- Appetizers -->
     <div class="menu-item">
+      <div class="menu-image">
+        <div class="image-box">
+          <img src="briam.jpg" alt="Briam dish" />
+        </div>
+      </div>
       <div class="menu-text">
         <p class="menu-item-name">Appetizers</p>
         <p class="menu-item-description"><strong>Briam</strong> – A medley of thinly sliced vegetables, delicately seasoned with oregano, rosemary, parsley, and fresh garlic, then drizzled with extra virgin olive oil.</p>
@@ -197,15 +191,15 @@
         <p class="menu-item-description"><strong>Bouyiourdi</strong> – Oven-baked feta cheese with ripe tomatoes, garlic, and chili, finished with extra virgin olive oil and served with warm pita bread.</p>
         <p class="menu-item-description"><strong>House Specialty:</strong> <em>Chimera Platter</em> – A divine trio of dolmas, grilled octopus, and roasted red pepper hummus served with warm lavash.</p>
       </div>
-      <div class="menu-image">
-        <div class="image-box">
-          <img src="briam.jpg" alt="Briam dish" />
-        </div>
-      </div>
     </div>
 
     <!-- Entrées -->
     <div class="menu-item">
+      <div class="menu-image">
+        <div class="image-box">
+          <img src="branzino.jpg" alt="Branzino dish" />
+        </div>
+      </div>
       <div class="menu-text">
         <p class="menu-item-name">Entrées</p>
         <p class="menu-item-description"><strong>Branzino</strong> – Whole Greek sea bass, expertly prepared and infused with fresh lemon wedges, oregano, and rosemary, drizzled with olive oil for a delicate, flavorful finish.</p>
@@ -213,26 +207,21 @@
         <p class="menu-item-description"><strong>Lahanorizio</strong> – A comforting braise of sautéed cabbage, fresh vegetables, and creamy rice, brought to perfection with a splash of lemon juice, a hint of parsley, and crumbles of feta cheese.</p>
         <p class="menu-item-description"><strong>House Specialty:</strong> <em>Poseidon's Feast</em> – A grilled seafood medley of shrimp, calamari, and scallops, kissed by citrus and herbs.</p>
       </div>
-      <div class="menu-image">
-        <div class="image-box">
-          <img src="branzino.jpg" alt="Branzino dish" />
-        </div>
-      </div>
     </div>
 
     <!-- Desserts -->
     <div class="menu-item">
+      <div class="menu-image">
+        <div class="image-box">
+          <img src="baklava.jpg" alt="Baklava Ice Cream Sundae" />
+        </div>
+      </div>
       <div class="menu-text">
         <p class="menu-item-name">Desserts</p>
         <p class="menu-item-description"><strong>Baklava Ice Cream Sundae</strong> – Layers of crispy, golden phyllo pastry combined with rich vanilla ice cream, topped with cinnamon-dusted pistachios and walnuts, then finished with a warm drizzle of honey.</p>
         <p class="menu-item-description"><strong>Loukoumades</strong> – Traditional Greek honey puffs, lightly fried to golden perfection, dusted with crushed nuts, and served with a side of fragrant honey.</p>
         <p class="menu-item-description"><strong>Portokalopita</strong> – A luscious, butter-free orange custard cake crafted with phyllo dough and bathed in a fragrant honey-orange syrup.</p>
         <p class="menu-item-description"><strong>House Specialty:</strong> <em>Nectar of the Gods</em> – Rosewater panna cotta topped with candied figs and a drizzle of saffron honey.</p>
-      </div>
-      <div class="menu-image">
-        <div class="image-box">
-          <img src="baklava.jpg" alt="Baklava Ice Cream Sundae" />
-        </div>
       </div>
     </div>
   </div>
