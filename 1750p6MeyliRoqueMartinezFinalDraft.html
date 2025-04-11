@@ -121,6 +121,49 @@
         margin: 0;
       }
     }
+
+    .menu-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    .menu-image {
+      flex: 1;
+      min-width: 250px;
+      order: 1;
+    }
+
+    .menu-text {
+      flex: 1;
+      min-width: 250px;
+      order: 2;
+    }
+
+    @media (min-width: 769px) {
+      .menu-image {
+        order: 2;
+      }
+      .menu-text {
+        order: 1;
+      }
+    }
+
+    .image-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -140,44 +183,50 @@
     <h2>Menu</h2>
 
     <!-- Appetizers -->
-    <div class="menu-section" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 40px;">
-      <div style="flex: 1; min-width: 250px;">
+    <div class="menu-item">
+      <div class="menu-image">
+        <div class="image-box">
+          <img src="briam.jpg" alt="Briam dish" />
+        </div>
+      </div>
+      <div class="menu-text">
         <p class="menu-item-name">Appetizers</p>
         <p class="menu-item-description"><strong>Briam</strong> – A medley of thinly sliced vegetables, delicately seasoned with oregano, rosemary, parsley, and fresh garlic, then drizzled with extra virgin olive oil.</p>
         <p class="menu-item-description"><strong>Soutzoukakia</strong> – Savory ground beef blended with onion, garlic, fresh herbs, and aromatic cumin, slowly simmered in a rich tomato sauce.</p>
         <p class="menu-item-description"><strong>Bouyiourdi</strong> – Oven-baked feta cheese with ripe tomatoes, garlic, and chili, finished with extra virgin olive oil and served with warm pita bread.</p>
-        <p class="menu-item-description"><strong>House Specialty: Saganaki</strong> – A traditional Greek fried cheese dish, flambéed with ouzo at the table for a dramatic and delicious experience.</p>
-      </div>
-      <div style="flex: 1; min-width: 250px; text-align: center;">
-        <img src="briam.jpg" alt="Briam dish" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);" />
+        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Chimera Platter</em> – A divine trio of dolmas, grilled octopus, and roasted red pepper hummus served with warm lavash.</p>
       </div>
     </div>
 
     <!-- Entrées -->
-    <div class="menu-section" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 40px;">
-      <div style="flex: 1; min-width: 250px;">
+    <div class="menu-item">
+      <div class="menu-image">
+        <div class="image-box">
+          <img src="branzino.jpg" alt="Branzino dish" />
+        </div>
+      </div>
+      <div class="menu-text">
         <p class="menu-item-name">Entrées</p>
         <p class="menu-item-description"><strong>Branzino</strong> – Whole Greek sea bass, expertly prepared and infused with fresh lemon wedges, oregano, and rosemary, drizzled with olive oil for a delicate, flavorful finish.</p>
         <p class="menu-item-description"><strong>Moussaka</strong> – A traditional Greek dish featuring layers of roasted eggplant and a rich, spiced lamb sauce, topped with a velvety béchamel.</p>
         <p class="menu-item-description"><strong>Lahanorizio</strong> – A comforting braise of sautéed cabbage, fresh vegetables, and creamy rice, brought to perfection with a splash of lemon juice, a hint of parsley, and crumbles of feta cheese.</p>
-        <p class="menu-item-description"><strong>House Specialty: Lamb Kleftiko</strong> – Slow-cooked lamb, marinated with garlic, lemon, and rosemary, served in a rustic clay pot for maximum flavor.</p>
-      </div>
-      <div style="flex: 1; min-width: 250px; text-align: center;">
-        <img src="branzino.jpg" alt="Branzino dish" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);" />
+        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Poseidon's Feast</em> – A grilled seafood medley of shrimp, calamari, and scallops, kissed by citrus and herbs.</p>
       </div>
     </div>
 
     <!-- Desserts -->
-    <div class="menu-section" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 40px;">
-      <div style="flex: 1; min-width: 250px;">
+    <div class="menu-item">
+      <div class="menu-image">
+        <div class="image-box">
+          <img src="baklava.jpg" alt="Baklava Ice Cream Sundae" />
+        </div>
+      </div>
+      <div class="menu-text">
         <p class="menu-item-name">Desserts</p>
         <p class="menu-item-description"><strong>Baklava Ice Cream Sundae</strong> – Layers of crispy, golden phyllo pastry combined with rich vanilla ice cream, topped with cinnamon-dusted pistachios and walnuts, then finished with a warm drizzle of honey.</p>
         <p class="menu-item-description"><strong>Loukoumades</strong> – Traditional Greek honey puffs, lightly fried to golden perfection, dusted with crushed nuts, and served with a side of fragrant honey.</p>
         <p class="menu-item-description"><strong>Portokalopita</strong> – A luscious, butter-free orange custard cake crafted with phyllo dough and bathed in a fragrant honey-orange syrup.</p>
-        <p class="menu-item-description"><strong>House Specialty: Galaktoboureko</strong> – A rich, custard-filled dessert wrapped in golden, flaky phyllo dough and soaked in a sweet syrup.</p>
-      </div>
-      <div style="flex: 1; min-width: 250px; text-align: center;">
-        <img src="baklava.jpg" alt="Baklava dessert" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.4);" />
+        <p class="menu-item-description"><strong>House Specialty:</strong> <em>Nectar of the Gods</em> – Rosewater panna cotta topped with candied figs and a drizzle of saffron honey.</p>
       </div>
     </div>
   </div>
@@ -211,3 +260,4 @@
   <p>© 2025, Meyli Roque Martinez. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
 </body>
 </html>
+
